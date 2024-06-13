@@ -16,3 +16,4 @@ jobs:
     - name: Run tests
       run: |
         python -m unittest discover
+        python check_new_files.py
