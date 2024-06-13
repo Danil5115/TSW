@@ -1,5 +1,5 @@
 import unittest
-from main import count_words
+from main import count_words, most_common_word
 
 class TestCountWords(unittest.TestCase):
     def test_count_words(self):
@@ -35,10 +35,6 @@ class TestMostCommonWord(unittest.TestCase):
         text = ""
         with self.assertRaises(ValueError):
             most_common_word(text)
-
-if __name__ == '__main__':
-    unittest.main()
-
 
 if __name__ == '__main__':
     unittest.main()
