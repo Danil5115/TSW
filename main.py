@@ -9,3 +9,9 @@ def count_words(text):
         else:
             word_count[word] = 1
     return word_count
+
+def most_common_word(text):
+    """Find the most common word in the given text."""
+    word_count = count_words(text)
+    most_common = max(word_count, key=word_count.get)
+    return most_common

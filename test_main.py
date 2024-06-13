@@ -25,5 +25,20 @@ class TestCountWords(unittest.TestCase):
         }
         self.assertEqual(count_words(text), expected_output)
 
+class TestMostCommonWord(unittest.TestCase):
+    def test_most_common_word(self):
+        text = "Hello world! Hello, how are you world?"
+        expected_output = 'hello'
+        self.assertEqual(most_common_word(text), expected_output)
+
+    def test_empty_string(self):
+        text = ""
+        with self.assertRaises(ValueError):
+            most_common_word(text)
+
+if __name__ == '__main__':
+    unittest.main()
+
+
 if __name__ == '__main__':
     unittest.main()
